@@ -1,41 +1,23 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-struct Kendaraan
-{
-    char Plat_Nomor[15];
-    char Jenis_Kendaraan[30];
-    char Nama_Pemilik[50];
-    char Alamat[100];
-    char Kota[30];
+struct plat {
+    char nomor[10]  = "DA1234MK";
+    char jenis[10]  = "RUSH";
+    char nama[20]   = "Andika Hartanto";
+    char alamat[30] = "Jl. Kayu Tangi 1";
+    char kota[20]   = "Banjarmasin";
 };
 
-int main(){
-    Kendaraan data;
+int main() {
+    plat mobil;
 
-    //Input Data
-    cout << "\n------------------------------------------------\n";
-    cout << "a. Plat Nomor Kendaraan : ";
-    cin.getline(data.Plat_Nomor, 15);
-    cout << "b. Jenis Kendaraan      : ";
-    cin.getline(data.Jenis_Kendaraan, 30);
-    cout << "c. Nama Pemilik         : ";
-    cin.getline(data.Nama_Pemilik, 50);
-    cout << "d. Alamat               : ";
-    cin.getline(data.Alamat, 100);
-    cout << "e. Kota                 : ";
-    cin.getline(data.Kota, 30);
-    cout << "------------------------------------------------\n\n";
-
-    //Output Data
-    cout << "------------------------------------------------\n";
-    cout << "a. Plat Nomor Kendaraan : " << data.Plat_Nomor << endl;
-    cout << "b. Jenis Kendaraan      : " << data.Jenis_Kendaraan << endl;
-    cout << "c. Nama Pemilik         : " << data.Nama_Pemilik << endl;
-    cout << "d. Alamat               : " << data.Alamat << endl;
-    cout << "e. Kota                 : " << data.Kota << endl;
-    cout << "------------------------------------------------\n";
+    cout << "a. Plat Nomor Kendaraan : " << mobil.nomor << endl;
+    cout << "b. Jenis Kendaraan      : " << mobil.jenis << endl;
+    cout << "c. Nama Pemilik         : " << mobil.nama << endl;
+    cout << "d. Alamat               : " << mobil.alamat << endl;
+    cout << "e. Kota                 : " << mobil.kota << endl;
 
     return 0;
 }
