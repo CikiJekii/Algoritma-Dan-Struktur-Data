@@ -1,0 +1,47 @@
+DEKLARASI
+    struct mhs:
+        nama, nim, jurusan: string
+        sks, program: integer
+    bayar: array[0..1] of mhs
+    tetap, var: integer
+
+ALGORITMA
+    FOR i FROM 0 TO 1 DO
+        PRINT "--------------------------------"
+        INPUT bayar[i].nama, bayar[i].nim, bayar[i].jurusan
+        
+        REPEAT
+            INPUT bayar[i].program
+            IF bayar[i].program < 1 OR bayar[i].program > 2 THEN
+                PRINT "Program tidak sesuai! Silakan masukkan 1 atau 2."
+            END IF
+        UNTIL bayar[i].program == 1 OR bayar[i].program == 2
+        
+        INPUT bayar[i].sks
+        
+        IF bayar[i].program == 1 THEN
+            tetap = 500000
+            var = bayar[i].sks * 25000
+        ELSE IF bayar[i].program == 2 THEN
+            tetap = 750000
+            var = bayar[i].sks * 50000
+        END IF
+        
+        PRINT "--------------------------------"
+        PRINT "Output Data Mahasiswa:"
+        PRINT "--------------------------------"
+        PRINT "Nama mhs       = ", bayar[i].nama
+        PRINT "NIM            = ", bayar[i].nim
+        PRINT "Jurusan        = ", bayar[i].jurusan
+        
+        IF bayar[i].program == 1 THEN
+            PRINT "Program        = D3"
+        ELSE
+            PRINT "Program        = S1"
+        END IF
+        
+        PRINT "Jumlah sks     = ", bayar[i].sks
+        PRINT "SPP tetap      = ", tetap
+        PRINT "SPP variabel   = ", var
+        
+    ENDFOR
