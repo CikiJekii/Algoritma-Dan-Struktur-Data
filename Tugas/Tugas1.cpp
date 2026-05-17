@@ -82,7 +82,7 @@ int main() {
                 break;
             default:
                 cout << "\nTERIMA KASIH" << endl;
-                cout << "Program was made by Abdurrazak (2510817110017)." << endl;
+                cout << "Program was made by Ahmad Muzakki Khaira (2510817310016)." << endl;
         }
 
         cout << "\nPress any key to continue!" << endl;
